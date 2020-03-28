@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <template>
   <div v-show="value" class="vue-image-crop-upload">
     <div class="vicp-wrap">
@@ -248,6 +249,7 @@ export default {
       // 浏览器是否支持该控件
       isSupported,
       // 浏览器是否支持触屏事件
+      // eslint-disable-next-line no-prototype-builtins
       isSupportTouch: document.hasOwnProperty('ontouchstart'),
       // 步骤
       step: 1, // 1选择文件 2剪裁 3上传
@@ -680,6 +682,7 @@ export default {
         x,
         y
       } = scale
+
       const sim = sourceImgMasking
       // 蒙版宽高
       const sWidth = sim.width
